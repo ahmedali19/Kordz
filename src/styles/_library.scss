@@ -1,9 +1,9 @@
-$light-color: #c6d5dd;
+$light-color: #b6cbd3;
 .library {
   position: fixed;
   top: 0;
   left: 0;
-  width: 20rem;
+  width: 25rem;
   height: 100%;
   box-shadow: 2px 2px 30px #505050;
   background-color: white;
@@ -72,7 +72,7 @@ $light-color: #c6d5dd;
   border: transparent;
 }
 .selected {
-  background-color: rgb(130, 164, 238) !important;
+  background-color: rgb(146, 171, 224) !important;
 }
 
 @media screen and (max-width: 620px) {
