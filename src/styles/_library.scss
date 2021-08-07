@@ -1,0 +1,82 @@
+$light-color: #c6d5dd;
+.library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100%;
+  box-shadow: 2px 2px 30px #505050;
+  background-color: white;
+  overflow: scroll;
+  padding: 1rem;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
+  h1 {
+    padding: 0 2rem 1rem 2rem;
+    text-align: center;
+  }
+}
+.toggled-lib {
+  transform: translateX(0%);
+  opacity: 1;
+}
+.library-songlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 40%;
+    border-radius: 5px;
+  }
+}
+.library-song {
+  display: flex;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: $light-color;
+  }
+  div {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3 {
+      font-size: 1.1rem;
+    }
+    h4 {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+/* The emerging W3C standard
+   that is currently Firefox-only */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $light-color transparent;
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 4px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: $light-color;
+  border-radius: 20px;
+  border: transparent;
+}
+.selected {
+  background-color: rgb(130, 164, 238) !important;
+}
+
+@media screen and (max-width: 620px) {
+  .library {
+    width: 100%;
+  }
+}
